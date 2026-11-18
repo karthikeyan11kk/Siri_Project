@@ -1,0 +1,35 @@
+{
+  "testDir": "tests",
+  "testMatch": "csv-tests-driver.spec.ts",
+  "browsers": [
+    "chromium"
+  ],
+  "fullyParallel": false,
+  "forbidOnly": false,
+  "retries": 0,
+  "workers": 2,
+  "reporter": [
+    "html"
+  ],
+  "timeoutMs": 300000,
+  "expectTimeoutMs": 10000,
+  "actionTimeoutMs": 20000,
+  "navigationTimeoutMs": 20000,
+  "viewportWidth": 1440,
+  "viewportHeight": 900,
+  "baseURL": "https://www.saucedemo.com",
+  "ignoreHTTPSErrors": false,
+  "trace": "on-first-retry",
+  "slowMo": 0,
+  "screenshot": "only-on-failure",
+  "stepScreenshotMode": "all-steps",
+  "stepScreenshotHighlight": false,
+  "stepScreenshotFullPage": false,
+  "video": "retain-on-failure",
+  "snapshotDir": "test-snapshots",
+  "outputDir": "",
+  "outputFolder": "",
+  "launchArgs": [
+    "--disable-features=LocalNetworkAccessChecks"
+  ]
+}

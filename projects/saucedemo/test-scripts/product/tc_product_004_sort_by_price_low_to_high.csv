@@ -1,0 +1,8 @@
+Run,Step,Action,Page,Object,Condition,Data
+Y,1,GOTO,LoginPage,page,,https://www.saucedemo.com/
+Y,2,FILL,LoginPage,usernameInput,,standard_user
+Y,3,FILL,LoginPage,passwordInput,,secret_sauce
+Y,4,CLICK,LoginPage,loginButton,,
+Y,5,SELECT,InventoryPage,sortDropdown,,Price (low to high)
+Y,6,ASSERT_VALUE,InventoryPage,sortDropdown,,equals|lohi
+Y,7,CALL,InventoryPage,assertSortedByPriceLowToHigh,,

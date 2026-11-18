@@ -1,0 +1,8 @@
+Run,Step,Action,Page,Object,Condition,Data
+Y,1,GOTO,LoginPage,page,,https://www.saucedemo.com/
+Y,2,FILL,LoginPage,usernameInput,,standard_user
+Y,3,FILL,LoginPage,passwordInput,,secret_sauce
+Y,4,CLICK,LoginPage,loginButton,,
+Y,5,ASSERT_URL,InventoryPage,page,,/inventory.html
+Y,6,ASSERT_TEXT,InventoryPage,title,,equals|Products
+Y,7,ASSERT_COUNT,InventoryPage,inventoryItems,,greater than or equal|6

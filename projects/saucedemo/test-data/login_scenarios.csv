@@ -1,0 +1,7 @@
+Scenario,username,password,expected_error_state,expected_error,expected_url_regex
+standard_user_success,standard_user,secret_sauce,,,/inventory.html$
+locked_out_user,locked_out_user,secret_sauce,contains,"Sorry, this user has been locked out.",/$
+invalid_credentials,invalid_user,wrong_password,contains,Username and password do not match,/$
+empty_username_password,,,contains,Username is required,/$
+empty_username,,secret_sauce,contains,Username is required,/$
+empty_password,standard_user,,contains,Password is required,/$

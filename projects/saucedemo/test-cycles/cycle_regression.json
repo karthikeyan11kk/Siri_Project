@@ -1,0 +1,141 @@
+{
+  "name": "Full Regression",
+  "project": "saucedemo",
+  "stages": [
+    {
+      "stage": 1,
+      "name": "Login Tests",
+      "execution": "parallel",
+      "retryOnFailure": 1,
+      "tests": [
+        {
+          "test": "login/tc_login_001_standard_user_success",
+          "testId": ""
+        },
+        {
+          "test": "login/tc_login_002_locked_out_user",
+          "testId": "",
+          "enabled": false
+        },
+        {
+          "test": "login/tc_login_003_invalid_credentials",
+          "testId": "",
+          "enabled": false
+        },
+        {
+          "test": "login/tc_login_004_empty_username_and_password",
+          "testId": "",
+          "enabled": false
+        },
+        {
+          "test": "login/tc_login_005_empty_username",
+          "testId": "",
+          "enabled": false
+        },
+        {
+          "test": "login/tc_login_006_empty_password",
+          "testId": "",
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "name": "Product Tests",
+      "execution": "parallel",
+      "tests": [
+        {
+          "test": "product/tc_product_001_inventory_page_loads",
+          "testId": ""
+        },
+        {
+          "test": "product/tc_product_002_add_product_to_cart",
+          "testId": "",
+          "enabled": false
+        },
+        {
+          "test": "product/tc_product_003_remove_product_from_inventory",
+          "testId": "",
+          "enabled": false
+        },
+        {
+          "test": "product/tc_product_004_sort_by_price_low_to_high",
+          "testId": "",
+          "enabled": false
+        },
+        {
+          "test": "product/tc_product_005_sort_by_name_descending",
+          "testId": "",
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "stage": 3,
+      "name": "Cart Tests",
+      "execution": "sequence",
+      "retryOnFailure": 1,
+      "stopOnStageFail": true,
+      "tests": [
+        {
+          "test": "cart/tc_cart_001_add_item_and_open_cart",
+          "testId": ""
+        },
+        {
+          "test": "cart/tc_cart_002_remove_item_from_cart",
+          "testId": "",
+          "enabled": false
+        },
+        {
+          "test": "cart/tc_cart_003_continue_shopping",
+          "testId": "",
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "stage": 4,
+      "name": "Checkout Tests",
+      "execution": "sequence",
+      "retryOnFailure": 1,
+      "stopOnStageFail": true,
+      "tests": [
+        {
+          "test": "checkout/tc_checkout_001_complete_order_success",
+          "testId": ""
+        },
+        {
+          "test": "checkout/tc_checkout_002_cancel_from_your_information",
+          "testId": "",
+          "enabled": false
+        },
+        {
+          "test": "checkout/tc_checkout_006_overview_page_elements_visible",
+          "testId": "",
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "stage": 5,
+      "name": "Navigation Tests",
+      "execution": "parallel",
+      "tests": [
+        {
+          "test": "home/tc_home_001_open_and_close_menu",
+          "testId": ""
+        },
+        {
+          "test": "home/tc_home_002_all_items_navigation",
+          "testId": "",
+          "enabled": false
+        },
+        {
+          "test": "home/tc_home_004_logout_from_menu",
+          "testId": "",
+          "enabled": false
+        }
+      ]
+    }
+  ]
+}

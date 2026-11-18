@@ -1,0 +1,69 @@
+{
+  "name": "Smoke Suite",
+  "project": "saucedemo",
+  "stages": [
+    {
+      "stage": 1,
+      "name": "Auth",
+      "execution": "parallel",
+      "retryOnFailure": 1,
+      "stopOnStageFail": true,
+      "tests": [
+        {
+          "testId": "",
+          "test": "login/tc_login_001_standard_user_success"
+        },
+        {
+          "testId": "",
+          "test": "login/tc_login_002_locked_out_user",
+          "enabled": true
+        },
+        {
+          "testId": "",
+          "test": "login/tc_login_data_driven",
+          "enabled": false
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "stage": 2,
+      "name": "Inventory",
+      "execution": "parallel",
+      "tests": [
+        {
+          "testId": "",
+          "test": "product/tc_product_001_inventory_page_loads",
+          "enabled": true
+        },
+        {
+          "testId": "",
+          "test": "product/tc_product_002_add_product_to_cart",
+          "enabled": false
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "stage": 3,
+      "name": "Purchase Flow",
+      "execution": "sequence",
+      "retryOnFailure": 1,
+      "stopOnStageFail": true,
+      "tests": [
+        {
+          "testId": "",
+          "test": "cart/tc_cart_001_add_item_and_open_cart",
+          "enabled": true
+        },
+        {
+          "testId": "",
+          "test": "checkout/tc_checkout_001_complete_order_success",
+          "enabled": true
+        }
+      ],
+      "enabled": true
+    }
+  ],
+  "zephyrCycleKeysByEnvironment": {}
+}

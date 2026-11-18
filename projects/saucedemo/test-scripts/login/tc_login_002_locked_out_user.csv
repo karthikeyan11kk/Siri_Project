@@ -1,0 +1,7 @@
+Run,Step,Action,Page,Object,Condition,Data
+Y,1,GOTO,LoginPage,page,,https://www.saucedemo.com/
+Y,2,FILL,LoginPage,usernameInput,,locked_out_user
+Y,3,FILL,LoginPage,passwordInput,,secret_sauce
+Y,4,CLICK,LoginPage,loginButton,,
+Y,5,ASSERT_TEXT,LoginPage,errorMessage,,"contains|Sorry, this user has been locked out."
+Y,6,ASSERT,LoginPage,loginButton,,is visible

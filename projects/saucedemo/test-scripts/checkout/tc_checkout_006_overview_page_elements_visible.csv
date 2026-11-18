@@ -1,0 +1,16 @@
+Run,Step,Action,Page,Object,Condition,Data
+Y,1,GOTO,LoginPage,page,,https://www.saucedemo.com/
+Y,2,FILL,LoginPage,usernameInput,,standard_user
+Y,3,FILL,LoginPage,passwordInput,,secret_sauce
+Y,4,CLICK,LoginPage,loginButton,,
+Y,5,CALL,InventoryPage,addToCartButtonByProductName,Sauce Labs Backpack,
+Y,6,CLICK,InventoryPage,shoppingCartLink,,
+Y,7,CLICK,CartPage,checkoutButton,,
+Y,8,FILL,CheckoutPage,firstNameInput,,John
+Y,9,FILL,CheckoutPage,lastNameInput,,Doe
+Y,10,FILL,CheckoutPage,postalCodeInput,,560001
+Y,11,CLICK,CheckoutPage,continueButton,,
+Y,12,ASSERT_URL,CheckoutPage,page,,/checkout-step-two.html
+Y,13,ASSERT_TEXT,CheckoutPage,page,,contains|Payment Information
+Y,14,ASSERT_TEXT,CheckoutPage,page,,contains|Shipping Information
+Y,15,ASSERT_TEXT,CheckoutPage,page,,contains|Price Total

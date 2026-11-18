@@ -1,0 +1,10 @@
+Run,Step,Action,Page,Object,Condition,Data
+Y,1,GOTO,LoginPage,page,,https://www.saucedemo.com/
+Y,2,FILL,LoginPage,usernameInput,,standard_user
+Y,3,FILL,LoginPage,passwordInput,,secret_sauce
+Y,4,CLICK,LoginPage,loginButton,,
+Y,5,CALL,InventoryPage,addToCartButtonByProductName,Sauce Labs Backpack,
+Y,6,ASSERT_TEXT,InventoryPage,shoppingCartBadge,,equals|1
+Y,7,CLICK,HeaderMenu,burgerButton,,
+Y,8,CLICK,HeaderMenu,resetAppStateLink,,
+Y,9,ASSERT,InventoryPage,shoppingCartBadge,,is hidden

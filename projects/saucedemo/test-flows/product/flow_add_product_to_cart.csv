@@ -1,0 +1,3 @@
+Run,Step,Action,Page,Object,Condition,Data
+Y,1,CLICK,InventoryPage,addToCartButtonByProductName,Sauce Labs Backpack,
+Y,2,ASSERT_TEXT,InventoryPage,shoppingCartBadge,,contains|1

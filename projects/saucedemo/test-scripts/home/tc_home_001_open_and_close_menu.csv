@@ -1,0 +1,9 @@
+Run,Step,Action,Page,Object,Condition,Data
+,1,GOTO,LoginPage,page,,https://www.saucedemo.com/
+,2,FILL,LoginPage,usernameInput,,standard_user
+,3,FILL,LoginPage,passwordInput,,secret_sauce
+,4,CLICK,LoginPage,loginButton,,
+,5,CLICK,HeaderMenu,burgerButton,,
+,6,ASSERT,HeaderMenu,menuPanel,,is visible
+,7,CLICK,HeaderMenu,closeButton,,
+,8,ASSERT,HeaderMenu,menuPanel,,is hidden

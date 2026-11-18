@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "defaultEnvironment": "qa",
+  "defaultUiApplicationId": "store",
+  "applications": [
+    {
+      "id": "store",
+      "displayName": "Store",
+      "environments": {
+        "dev": {
+          "uiBaseUrl": "https://www.saucedemo.com",
+          "apiBaseUrl": "https://www.saucedemo.com"
+        },
+        "acpt": {
+          "uiBaseUrl": "https://www.saucedemo.com",
+          "apiBaseUrl": "https://www.saucedemo.com"
+        },
+        "qa": {
+          "uiBaseUrl": "https://www.saucedemo.com",
+          "apiBaseUrl": "https://www.saucedemo.com"
+        }
+      }
+    },
+    {
+      "id": "admin",
+      "displayName": "Admin",
+      "environments": {
+        "dev": {
+          "uiBaseUrl": "https://www.saucedemo.com",
+          "apiBaseUrl": "https://www.saucedemo.com"
+        },
+        "acpt": {
+          "uiBaseUrl": "https://www.saucedemo.com",
+          "apiBaseUrl": "https://www.saucedemo.com"
+        },
+        "qa": {
+          "uiBaseUrl": "https://www.saucedemo.com",
+          "apiBaseUrl": "https://www.saucedemo.com"
+        }
+      }
+    }
+  ]
+}

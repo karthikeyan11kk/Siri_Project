@@ -1,0 +1,4 @@
+﻿Run,Step,Action,Page,Object,Condition,Data
+Y,1,RUN_FLOW,login/flow_login_standard_user,,,
+Y,2,RUN_FLOW,product/flow_add_product_to_cart,,,
+Y,3,RUN_FLOW,cart/flow_open_and_verify_cart,,,

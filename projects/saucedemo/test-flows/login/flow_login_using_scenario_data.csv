@@ -1,0 +1,7 @@
+Run,Step,Action,Page,Object,Condition,Data
+Y,1,GOTO,LoginPage,page,,https://www.saucedemo.com/
+Y,2,FILL,LoginPage,usernameInput,,${username}
+Y,3,FILL,LoginPage,passwordInput,,${password}
+Y,4,CLICK,LoginPage,loginButton,,
+Y,5,ASSERT_URL,LoginPage,page,,${expected_url_regex}
+Y,6,ASSERT_TEXT,LoginPage,errorMessage,,contains|${expected_error}

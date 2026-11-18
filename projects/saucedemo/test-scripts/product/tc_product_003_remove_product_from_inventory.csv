@@ -1,0 +1,8 @@
+Run,Step,Action,Page,Object,Condition,Data
+,1,GOTO,LoginPage,page,,https://www.saucedemo.com/
+,2,FILL,LoginPage,usernameInput,,standard_user
+,3,FILL,LoginPage,passwordInput,,secret_sauce
+,4,CLICK,LoginPage,loginButton,,
+,5,CALL,InventoryPage,addToCartButtonByProductName,Sauce Labs Backpack,
+,6,CALL,InventoryPage,removeButtonByProductName,Sauce Labs Backpack,
+,7,ASSERT,InventoryPage,shoppingCartBadge,,is hidden

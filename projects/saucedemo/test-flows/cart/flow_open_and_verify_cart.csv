@@ -1,0 +1,4 @@
+Run,Step,Action,Page,Object,Condition,Data
+Y,1,CLICK,InventoryPage,shoppingCartLink,,
+Y,2,ASSERT_URL,CartPage,page,,/cart.html
+Y,3,ASSERT_COUNT,CartPage,cartItems,,equals|1
